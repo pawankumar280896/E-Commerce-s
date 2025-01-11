@@ -1,0 +1,260 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+/* Navigation Section */
+.navigation {
+    text-align: right;
+    padding: 10px 20px;
+    background-color: #333; /* Dark background for navigation */
+}
+
+.navigation .navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex; /* Align items in a horizontal row */
+    gap: 30px; /* Space between items */
+}
+
+.navigation .navbar li {
+    position: relative; /* Required for hover effects */
+}
+
+.navigation .navbar a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-size: 18px;
+    padding: 10px 15px; /* Clickable area */
+    transition: color 0.3s ease; /* Smooth hover effect for color */
+}
+
+.navigation .navbar a:hover {
+    color: #00bfff; /* Light blue text on hover */
+}
+
+.navigation .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #00bfff; /* Underline color */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navigation .navbar a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+}
+
+
+/* Main Section */
+.main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Main Section */
+.main {
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* SubMain Section - Full-Width */
+.subMain {
+    border: 2px solid #ef0606;
+    background-color: rgba(255, 0, 0, 0.7); /* Slight transparency for soft red */
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+    width: 100vw; /* Full width of the viewport */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    border-radius: 0; /* Remove rounded corners for full-width effect */
+    box-shadow: none; /* No shadow for full-width design */
+}
+
+.subMain h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subMain h6 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffd1d1; /* Softer pinkish-white for subheading */
+}
+
+.subMain .shopnow button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #fff; /* White background */
+    color: #ef0606; /* Red text */
+    border: 2px solid #ef0606;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subMain .shopnow button:hover {
+    background-color: #ef0606;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight hover effect */
+}
+
+/* Shop By Category, Featured Products, and Customer Terminals */
+.shopbycat, .features_prdt, .customerterminals {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 99%; /* Limit width for a clean layout */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.shopbycat h1, .features_prdt h1, .customerterminals h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #444;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+}
+
+p {
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+}
+
+/* Flex container */
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Category styling */
+.category, .product, .testimonals {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Fixed width for uniformity */
+    flex: 0 1 auto; /* Prevents shrinking, adjusts size if needed */
+}
+
+.category img, .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.category:hover, .product:hover, .testimonals:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonial styling */
+.testimonals p {
+    font-style: italic;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.testimonals h3 {
+    text-align: right;
+    color: #888;
+}
+
+/* Section Spacing */
+.shopbycat, .features_prdt, .customerterminals {
+    margin: 40px 0;
+    padding: 20px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shopbycat h1, .features_prdt h1, .customerterminals h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3, p {
+        font-size: 1em;
+    }
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
